@@ -1,0 +1,5 @@
+version=4
+
+opts=downloadurlmangle=s@ftp:@http:@ \
+http://www.sourceware.org/pub/newlib/ \
+ftp://sourceware.org/pub/newlib/newlib-(.*)\.tar\.gz
