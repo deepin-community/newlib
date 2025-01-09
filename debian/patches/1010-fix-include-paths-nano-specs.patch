@@ -1,0 +1,16 @@
+Description: Fix wrong include path used in nano.specs (Closes: #801338)
+Author: Agustin Henze <tin@debian.org>
+Forwarded: no
+Last-Changed: 2024-03-06
+
+--- a/libgloss/arm/elf-nano.specs
++++ b/libgloss/arm/elf-nano.specs
+@@ -3,7 +3,7 @@
+ %rename cpp_unique_options		nano_cpp_unique_options
+ 
+ *cpp_unique_options:
+--isystem =/include/newlib-nano %(nano_cpp_unique_options)
++-isystem /usr/include/newlib/nano %(nano_cpp_unique_options)
+ 
+ *nano_libc:
+ -lc_nano
